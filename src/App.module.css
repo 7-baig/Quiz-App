@@ -1,0 +1,31 @@
+.container {
+    background-color: #fceed1;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.welcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.welcome img {
+    width: 50%;
+    margin: 10px 0px;
+}
+.container button {
+    margin: 20px 0px;
+    background-color: #7d3cff;
+    border: none;
+    padding: 20px 40px;
+    border-radius: 5px;
+    color: #FFFFFF;
+    font-size: 1.6em;
+    letter-spacing: 1px;
+    cursor: pointer;    
+}
+.container button:hover {
+    background-color: #8e56ff;
+}
