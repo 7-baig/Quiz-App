@@ -1,5 +1,5 @@
 # Setup
-###### To run this app locally,
+##### To run this app locally,
 
 ```javascript
 git clone 'https://github.com/7-baig/Quiz-App.git'
@@ -8,11 +8,11 @@ npm install
 npm start
 ```
 
-###### This app will run on [http://localhost:3000](http://localhost:3000)
+##### This app will run on [http://localhost:3000](http://localhost:3000)
 
 
 # Screenshots
----
+
 ![Home](./src/images/Screenshots/Home.png)
 ![Game](./src/images/Screenshots/Game.png)
 ![Completed_1](./src/images/Screenshots/Completed_1.png)
