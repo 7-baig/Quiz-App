@@ -109,7 +109,7 @@ const Main: React.FC<Props> = ({
                     ?
                     <div className={styles.gameContainer}>
 
-                        <h6 className={styles.question}>{question}</h6>
+                        <h6 className={styles.question} dangerouslySetInnerHTML={{ __html: question}} />
 
                         <div className={styles.answersContainer}>
                             {
@@ -124,7 +124,7 @@ const Main: React.FC<Props> = ({
                                 ))
                             }
                         </div>
-                        
+
                         {/* next button */}
                         {number !== totalQuestions - 1 && userAnswer ? <img src={nextIcon} onClick={handleNextButton} className={styles.nextIcon} /> : null}
 
@@ -160,10 +160,22 @@ const Main: React.FC<Props> = ({
                             userAnswers.map(item => (
                                 <>
                                     <h2>Question {item.questionNm}</h2>
-                                    <p>Question: {item.question}</p>
-                                    <p>Your Answer: {item.answer}</p>
-                                    <p>Correct Answer: {item.correctAnswer}</p>
-                                    <p>{item.correct ? `Is your answer correct?: Yes` : `Is your answer correct?: No`}</p>
+                                    <p 
+                                        dangerouslySetInnerHTML={{ __html: item.question}} 
+                                    />
+                                    <p 
+                                        dangerouslySetInnerHTML={{ __html: `Your answer: ${item.answer}`}}
+                                        style={{ color: '#7d3cff' }}
+                                    />
+                                    <p
+                                        dangerouslySetInnerHTML={{ __html: `Correct Answer: ${item.correctAnswer}`}}
+                                        style={{ color: 'green' }}
+                                    />
+                                    <p
+                                        style={ item.correct ? { color: 'green' } : { color: 'red' }}
+                                    >
+                                        {item.correct ? `Is your answer correct?: Yes` : `Is your answer correct?: No`}
+                                    </p>
                                 </>
                             ))}
                     </div> : null

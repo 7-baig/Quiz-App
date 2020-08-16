@@ -5,6 +5,30 @@
     justify-content: center;
     align-items: center;
 }
+.github {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+.github img {
+    width: 30px;
+}
+.github img:hover {
+    animation-name: rotate;
+    animation-iteration-count: 1;
+    animation-duration: 2s;
+}
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
 .welcome {
     display: flex;
     flex-direction: column;
@@ -14,6 +38,26 @@
 .welcome img {
     width: 50%;
     margin: 10px 0px;
+    animation-name: welcome;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+}
+@keyframes welcome {
+    0% { 
+        transform: scale(1, 1)
+    }
+    25% {
+        transform: scale(1.1, 1.1)
+    }
+    50% {
+        transform: scale(1, 1)
+    }
+    75% {
+        transform: scale(1.1, 1.1)
+    }
+    100% {
+        transform: scale(1, 1)
+    }
 }
 .container button {
     margin: 20px 0px;
@@ -50,4 +94,16 @@
 .loading p {
     font-size: 2em;
     margin: 10px 0px;
+}
+
+/* media queries */
+@media screen and (max-width: 480px) {
+    .github {
+        position: absolute;
+        bottom: 7px;
+        left: 7px;
+    }
+    .github img {
+        width: 20px;
+    }    
 }

@@ -3,6 +3,7 @@ import styles from './App.module.css';
 import Main from './components/Main/Main';
 import welcome from './images/welcome.svg'
 import loader from './images/loader.svg'
+import githubIcon from './images/github.svg'
 import { FetchData } from './API'
 
 const App = () => {
@@ -29,6 +30,11 @@ const App = () => {
 
   return (
     <div className={styles.container}>
+
+      {/* github */}
+      <div className={styles.github}>
+        <a href="https://github.com/7-baig/Quiz-App"><img src={githubIcon} alt="githubIcon"/></a>
+      </div>
 
       {/* Start Button */}
         { !start 
