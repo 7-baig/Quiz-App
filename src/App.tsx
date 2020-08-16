@@ -6,11 +6,20 @@ import loader from './images/loader.svg'
 import githubIcon from './images/github.svg'
 import { FetchData } from './API'
 
+type Question = {
+  category: string
+  correct_answer: string
+  incorrect_answers: string[]
+  difficulty: string
+  question: string
+  type: string 
+}
+
 const App = () => {
 
   const [start, setStart] = useState(false)
   const [loading, setLoading] = useState(false)
-  const [data, setData] = useState({})
+  const [data, setData] = useState<Question[]>([])
   const [number, setNumber] = useState(0)
 
   // Start Quiz
