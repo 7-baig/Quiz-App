@@ -109,8 +109,6 @@ const Main: React.FC<Props> = ({
                     ?
                     <div className={styles.gameContainer}>
 
-                        {/* <p className={styles.score}>Score: {score}</p> */}
-
                         <h6 className={styles.question}>{question}</h6>
 
                         <div className={styles.answersContainer}>
@@ -126,7 +124,8 @@ const Main: React.FC<Props> = ({
                                 ))
                             }
                         </div>
-
+                        
+                        {/* next button */}
                         {number !== totalQuestions - 1 && userAnswer ? <img src={nextIcon} onClick={handleNextButton} className={styles.nextIcon} /> : null}
 
                     </div>

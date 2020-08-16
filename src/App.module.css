@@ -29,3 +29,25 @@
 .container button:hover {
     background-color: #8e56ff;
 }
+.loading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.loading img {
+    width: 80px;
+    margin: 10px 0px;
+    animation-name: loader;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+@keyframes loader {
+    0%   { transform: rotate(0deg) }
+    100% { transform: rotate(360deg) }
+}
+
+.loading p {
+    font-size: 2em;
+    margin: 10px 0px;
+}

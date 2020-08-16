@@ -2,15 +2,17 @@ import React, { useState } from 'react';
 import styles from './App.module.css';
 import Main from './components/Main/Main';
 import welcome from './images/welcome.svg'
+import loader from './images/loader.svg'
 import { FetchData } from './API'
 
 const App = () => {
 
   const [start, setStart] = useState(false)
   const [loading, setLoading] = useState(false)
-  const [data, setData] = useState()
+  const [data, setData] = useState({})
   const [number, setNumber] = useState(0)
 
+  // Start Quiz
   const handleClick = async () => {
     setStart(true)
     setLoading(true)
@@ -20,11 +22,15 @@ const App = () => {
     setLoading(false)
 
   }
+
+  // shuffle answers
   const answers = (array: any[]) => [...array].sort(() => Math.random() - 0.5)
+
 
   return (
     <div className={styles.container}>
 
+      {/* Start Button */}
         { !start 
         ? 
         <div className={styles.welcome}>
@@ -33,6 +39,19 @@ const App = () => {
         </div>
         : null }
 
+      {/* Loading */}
+      {
+        loading
+        ?
+        <div className={styles.loading}>
+          <img src={loader} />
+          <p>One moment...</p>
+        </div>
+        :
+        null
+      }
+
+      {/* Game Card */}
         { 
           start && !loading
           ? 

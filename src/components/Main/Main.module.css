@@ -42,10 +42,10 @@
     margin-top: 10px;
 }
 .question {
+    line-height: 27px;
     font-size: 2em;
     text-align: center;
     width: 80%;
-    line-height: 27px;
     margin: 10px 0px;
 }
 .answersContainer {
@@ -131,6 +131,9 @@
     .container {
         width: 90%;
     }
+    .question {
+        line-height: 20px;
+    }
     .resultsContainer img {
         width: 75%;
     }
@@ -143,5 +146,10 @@
     }
     .resultsContainer {
         width: 90%;
+    }
+    .answersContainer button {
+        background-color: #f2d53c;
+        margin: 5px 0px;
+        padding: 15px 30px;
     }
 }
