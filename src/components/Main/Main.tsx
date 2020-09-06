@@ -97,7 +97,7 @@ const Main: React.FC<Props> = ({
                 {
                  userAnswers.length === 10
                         ?
-                        <img src={checkIcon} className={styles.checkIcon} />
+                        <img src={checkIcon} alt="check-icon" className={styles.checkIcon} />
                         :
                         <p className={styles.questionNm}>{questionNm}/{totalQuestions}</p>
                 }
@@ -126,7 +126,7 @@ const Main: React.FC<Props> = ({
                         </div>
 
                         {/* next button */}
-                        {number !== totalQuestions - 1 && userAnswer ? <img src={nextIcon} onClick={handleNextButton} className={styles.nextIcon} /> : null}
+                        {number !== totalQuestions - 1 && userAnswer ? <img src={nextIcon} alt="next-icon" onClick={handleNextButton} className={styles.nextIcon} /> : null}
 
                     </div>
                     : null}
@@ -138,7 +138,7 @@ const Main: React.FC<Props> = ({
                     ? 
                     <div className={styles.resultsContainer}>
 
-                        <img src={correctNumber < 5 ? sad : completed} />
+                        <img src={correctNumber < 5 ? sad : completed} alt="reaction" />
                         <h1 style={score < 50 ? {color: '#c80e13'} : {color: 'green'}}>Completed</h1> 
                         <h2 className={styles.score}>Score: <span style={score < 50 ? {color: '#c80e13'} : {color: 'green'}}>{score}</span></h2>
                         <h3>Correct: <span style={correctNumber < 5 ? {color: '#c80e13'} : {color: 'green'}}>{correctNumber}</span></h3>

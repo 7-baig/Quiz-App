@@ -49,7 +49,7 @@ const App = () => {
         { !start 
         ? 
         <div className={styles.welcome}>
-        <img src={welcome} />
+        <img src={welcome} alt="welcome-img" />
         <button onClick={handleClick}>Start Quiz</button>
         </div>
         : null }
@@ -59,7 +59,7 @@ const App = () => {
         loading
         ?
         <div className={styles.loading}>
-          <img src={loader} />
+          <img src={loader} alt="loader" />
           <p>One moment...</p>
         </div>
         :
